@@ -1,0 +1,20 @@
+<%- include('header'); %>
+
+<p>
+	<% for (var i = 1; i <=5; i++) { %>
+	<% if (i==1) { %>
+		<p>Voici <%=i%> canard </p>
+	<% } else { %>
+		 <p> Voici <%=i%> canards </p>
+	<% } %>
+	<% } %>
+</p>
+
+<p> <%=monobjet.nom %> </p>
+<p> <%=monobjet.valeur %> </p>
+
+<form action="/test" method="post">
+	<input type ="text" id="name" name="user_name" required minlength="1" maxlength="30" size="10" placeholder="Prénom">
+	<button type="submit">OK</button>
+</form>
+<%- include ('footer'); %>
